@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundação Pelé</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img_1_-removebg-preview.png" alt="Logo da Fundação">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="#loja">Loja</a></li>
+                    <li><a href="#bilheteria">Bilheteria</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#doar" class="btn-doar">Doar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>NOSSOS PRODUTOS:</h1>
+     <section id="loja" class="section-padded bg-light">
+            <div class="container">
+                <h2>Nossos Produtos Exclusivos</h2>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <div class="produto-card">
+                            <img src="FotosProdutos/Camiseta.png" alt="Camiseta Exclusiva 1">
+                            <h3>Camiseta Edição Limitada</h3>
+                            <p class="preco">R$ 49,90</p>
+                            <a href="#" class="btn-comprar">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="produto-card">
+                            <img src="FotosProdutos/Chinelo.png" alt="Chinelo Confortável">
+                            <h3>Chinelo Oficial</h3>
+                            <p class="preco">R$ 29,90</p>
+                            <a href="#" class="btn-comprar">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="produto-card">
+                            <img src="FotosProdutos/Caneca.png" alt="Caneca Personalizada">
+                            <h3>Caneca Colecionável</h3>
+                            <p class="preco">R$ 19,90</p>
+                            <a href="#" class="btn-comprar">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="produto-card">
+                            <img src="FotosProdutos/Boné.png" alt="Boné Oficial">
+                            <h3>Boné da Fundação</h3>
+                            <p class="preco">R$ 39,90</p>
+                            <a href="carrinho.html" class="btn-comprar">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="prev-btn">&lt;</button>
+                    <button class="next-btn">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="bilheteria" class="section-padded">
+            <div class="container text-center">
+                <h2>Bilheteria de Jogos</h2>
+                <p>Garanta seu lugar para assistir aos grandes jogos e apoiar nossos clubes parceiros!</p>
+                <button id="mostrarPrecosBtn" class="btn-primary">Ver Opções de Planos</button>
+
+                <div id="tabelaPrecos" class="tabela-precos hidden">
+                    <h3>Escolha seu Plano de Acesso</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Plano</th>
+                                <th>Preço</th>
+                                <th>Benefícios</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Acesso 1 Mês</td>
+                                <td>R$ 49,90</td>
+                                <td>Acesso a todos os jogos do mês vigente.</td>
+                                <td><a href="#" class="btn-secondary">Assinar</a></td>
+                            </tr>
+                            <tr>
+                                <td>Acesso 3 Meses</td>
+                                <td>R$ 129,90</td>
+                                <td>Acesso a todos os jogos por 3 meses, desconto de 15%.</td>
+                                <td><a href="#" class="btn-secondary">Assinar</a></td>
+                            </tr>
+                            <tr>
+                                <td>Acesso 1 Ano</td>
+                                <td>R$ 499,90</td>
+                                <td>Acesso ilimitado por 1 ano, desconto de 20%, prioridade em eventos.</td>
+                                <td><a href="#" class="btn-secondary">Assinar</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<script src="script.js"></script>
+  </body>
+</html>

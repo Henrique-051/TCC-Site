@@ -1,0 +1,508 @@
+/* Importar fontes do Google Fonts (opcional) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 2.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin:0 auto;
+    padding:0px 0; ;
+    font-size:18px;
+}
+.paragrafo{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background: #c17b04e8;
+    color: #7b7b7b;
+    padding: 0px auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.678);
+    height: 100px; /* Altura do cabeçalho */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+}
+
+.logo img {
+    height: 100px; /* Ajuste o tamanho do logo */
+    width: 60px; /* Ajuste o tamanho do logo */
+    object-fit: contain; /* Garante que o logo mantenha suas proporções */
+    margin-right: 10px; /* Espaçamento entre o logo e o texto */
+}
+
+nav ul {
+    list-style:none;
+    display: flex;
+     
+}
+
+nav ul li {
+    margin-left: 40px;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #404040; /* Cor de destaque */
+}
+
+.btn-doar {
+    background-color: #f8bc0a; /* Cor amarela para o botão de doação */
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-doar:hover {
+    background-color: #383838;
+}
+
+/* --- Seções Gerais --- */
+.section-padded {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: #e9ecef;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0056b3; /* Cor azul para títulos */
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: url(pelé.webp) no-repeat center center/cover; /* Adicione uma imagem de fundo impactante */
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+    z-index: 1; /* Coloca o overlay abaixo do conteúdo */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #f6b401;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    border: none; /* Remover borda padrão do botão */
+    cursor: pointer; /* Indicar que é clicável */
+}
+
+.btn-primary:hover {
+    background-color: #494949;
+}
+
+/* --- Carrossel de Produtos (Loja) --- */
+.carousel-container {
+    display: flex;
+    
+    position: relative;
+    width: 100%; /* Garante que o container ocupe a largura total */
+    scroll-behavior:smooth; /* Rolagem suave para o carrossel */
+}
+
+.carousel-slide {
+    flex: 0 0 100%; /* Cada slide ocupa 100% da largura do container */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Centraliza os produtos dentro do slide */
+    min-width: 100%; /* Garante que o slide não encolha */
+}
+
+.produto-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    width: 80%; /* Ajuste a largura dos cards conforme necessário */
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+}
+
+.produto-card img {
+    max-width: 100%;
+    height: 200px; /* Altura fixa para as imagens dos produtos */
+    object-fit: cover; /* Recorta a imagem para cobrir a área */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.produto-card h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.preco {
+    color: #dc3545; /* Cor vermelha para o preço */
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.btn-comprar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #0056b3;
+}
+
+.carousel-navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carousel-navigation button {
+    background: #fac802; /* Fundo azul para os botões de navegação */
+    color: #fff;
+    border: none;
+    font-size: 1.5em;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-navigation button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Seção de Bilheteria --- */
+#bilheteria .container {
+    text-align: center;
+}
+
+#mostrarPrecosBtn {
+    margin-top: 20px;
+}
+
+.tabela-precos {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.5s ease-in-out;
+    opacity: 0; /* Começa escondido */
+    max-height: 0;
+    overflow: hidden;
+}
+
+.tabela-precos.visible {
+    opacity: 1; /* Fica visível */
+    max-height: 500px; /* Ajuste conforme o conteúdo da tabela */
+}
+
+.tabela-precos h3 {
+    color: #0056b3;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.tabela-precos table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabela-precos th,
+.tabela-precos td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.tabela-precos th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #555;
+}
+
+.tabela-precos tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabela-precos .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.tabela-precos .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+
+/* --- Grid de Projetos e Notícias (existente) --- */
+.projetos-grid, .noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.projeto-card, .noticia-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.projeto-card:hover, .noticia-card:hover {
+    transform: translateY(-5px);
+}
+
+.projeto-card img, .noticia-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projeto-card h3, .noticia-card h3 {
+    margin: 20px 0 10px;
+    color: #0056b3;
+}
+
+.projeto-card p, .noticia-card p {
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+/* --- Formulário de Contato (existente) --- */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+/* --- Botão de Doação Grande (existente) --- */
+.btn-doar-large {
+    background-color: #28a745;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-doar-large:hover {
+    background-color: #218838;
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.social-media img {
+    height: 30px;
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+/* --- Responsividade Básica --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .projetos-grid, .noticias-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .section-padded {
+        padding: 50px 0;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Ajustes para a tabela de preços em telas pequenas */
+    .tabela-precos table,
+    .tabela-precos thead,
+    .tabela-precos tbody,
+    .tabela-precos th,
+    .tabela-precos td,
+    .tabela-precos tr {
+        display: block;
+    }
+
+    .tabela-precos thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .tabela-precos tr {
+        margin-bottom: 15px;
+    }
+
+    .tabela-precos td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    .tabela-precos td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+}
